@@ -9,12 +9,20 @@ body {
   --line-offset: calc((10vh + 8px) / 2);
 }
 
+.navbar {
+  z-index: 1;
+}
+
+img {
+  z-index: -1;
+}
+
 .container {
   width: 100vw;
   height: 100vh;
   display: grid;
   grid-template-rows: 5fr 1fr;
-  background: #021919;
+  background: #f8f8ff;
 }
 
 ul {
@@ -54,8 +62,8 @@ ul {
 
 .preview-list {
   background: linear-gradient(
-      #021919,
-      #021919 var(--line-offset),
+      #f8f8ff,
+      #f8f8ff var(--line-offset),
       #efefef var(--line-offset)
   );
 }
@@ -64,7 +72,7 @@ ul {
   background: linear-gradient(
       #efefef,
       #efefef var(--line-offset),
-      #021919 var(--line-offset)
+      #f8f8ff var(--line-offset)
   );
 }
 
@@ -80,7 +88,7 @@ ul {
 
 .content {
   position: absolute;
-  background: #021919;
+  background: #f8f8ff;
   top: 1vh;
   left: 0;
   width: 100vw;
@@ -93,4 +101,28 @@ ul {
 .content img {
   height: auto;
   width: 100vw;  
+}
+
+body{
+  overflow:hidden;
+}
+
+.hard {
+	background-color: #00F;
+}
+
+.pg1 {
+	background-color: #FF0;
+}
+
+.pg2 {
+	background-color: #0FF;
+}
+
+.pg3 {
+	background-color: #F0F;
+}
+
+.pg4 {
+	background-color: #F00
 }
