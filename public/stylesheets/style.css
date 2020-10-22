@@ -206,7 +206,12 @@ bodyM {
 
 .bodyA {
   padding: 30px 0;
+
+body {
+  padding: 0;
+
   position: relative;
+  overflow: hidden;
 }
 
 .gallery {
@@ -214,7 +219,7 @@ bodyM {
   margin: auto;
   border-radius: 3px;
   overflow: hidden;
-  //position: relative;
+  position: relative;
 }
 .img-c {
   width: 200px;
@@ -252,7 +257,7 @@ bodyM {
   height: 100% !important;
   position: absolute;
   z-index: 2;
-  //transform: translateX(-50%);
+  transform: translateX(-50%);
 }
 
 .img-c.postactive {
@@ -267,6 +272,47 @@ bodyM {
   transition-delay: 50ms;
 }
 
+
 #navBar {
   z-index: 23;
+}
+
+.containersignup {
+  background: url(https://static01.nyt.com/images/2016/09/28/well/well_guide_metropolitan-slide-I91T/well_guide_metropolitan-slide-I91T-jumbo-v3.jpg);
+  background-position: center center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+h2 {
+  font-weight: bold;
+  color: white;
+  font-style: italic;
+  font-size: 70px;
+}
+
+p {
+  font-weight: bold;
+  color: white;
+  font-style: italic;
+  font-size: 25px;
+}
+
+.email {
+  font-weight: bold;
+  color: white;
+  font-style: italic;
+  font-size: 20px;
+}
+
+.password {
+  font-weight: bold;
+  color: white;
+  font-style: italic;
+  font-size: 20px;
+}
+
+.container {
+  align-content: center;
+  padding-bottom: 145px;
 }
