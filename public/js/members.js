@@ -20,11 +20,16 @@ $(artistSearch).on("submit", function handleFormSubmit(event) {
         console.log(data);
         for(i = 0; i < data.length; i++) {
             var imageDiv = $('<div>')
+            imageDiv.attr('class', 'col-md-4 col-sm-6 text-center')
             var artImage = $('<img>')
             console.log(data[i].thumbnailUrl);
             artImage.attr('src', data[i].thumbnailUrl);
+            artImage.attr('onclick', 'openModal()')
             imageDiv.append(artImage);
             $('.results').append(imageDiv);
+
+            
+
         }
 
       }

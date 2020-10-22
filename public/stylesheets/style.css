@@ -207,7 +207,8 @@ bodyM {
 .bodyA {
   padding: 30px 0;
 }
-body {
+
+.bodyA body {
   padding: 0;
 
   position: relative;
