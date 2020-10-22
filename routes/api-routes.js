@@ -4,11 +4,10 @@ const passport = require("../config/passport");
 
 module.exports = function(app) {
   //SEARCH ENDPOINTS
-  app.get('/api/namesearch/:name', (req, res) => {
+  app.get('/namesearch/:name', (req, res) => {
 
     var firstName = req.params.name.split(' ').slice(0, -1).join(' ');
     var lastName = req.params.name.split(' ').slice(-1).join(' ');
-    
     var name = `${lastName}, ${firstName}`
     
       console.log(name);
@@ -17,7 +16,7 @@ module.exports = function(app) {
         where: {
           artist: name
         }
-      }).then(users => res.json(users))
+      }).then(art => res.json(art))
     });
 
   // Using the passport.authenticate middleware with our local strategy.
@@ -51,15 +50,6 @@ module.exports = function(app) {
   app.get("/logout", (req, res) => {
     req.logout();
     res.redirect("/");
-  });
-
-  app.get("/art", (req, res) => {
-    app.get(
-      "SELECT artist_data_csv.name, artist_data_csv.placeOfBirth, artist_data_csv.gender, artist_data_csv.dates, artwork_data.title, artwork_data.dateText, artwork_data.medium, artwork_data.year, artwork_data.thumbnailUrl FROM artist_data_csv INNER JOIN artwork_data on artist_data_csv.id = artwork_data.artistId WHERE artist_data_csv.id = 10093", 
-      function(err, res) {
-      if (err) throw err;
-      console.log(res);
-    });
   });
 
   // Route for getting some data about our user to be used client side
