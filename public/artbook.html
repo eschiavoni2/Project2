@@ -13,7 +13,7 @@
     </script>
 </head>
 
-<body>
+<body class="bodyA">
     <!-- <div class="container"> -->
     <div id="flipbook">
         <div class="hard"></div>
@@ -46,8 +46,8 @@
     <button id="nextBtn">Next</button>
     <script>
         $("#flipbook").turn({
-            width: 960,
-            height: 600,
+            width: 1860,
+            height: 1500,
             autoCenter: true
         });
 
@@ -70,11 +70,12 @@
         });
     </script>
     <script>
-        $(function() {
-$(".img-w").each(function() {
-$(this).wrap("<div class='img-c'></div>")
-let imgSrc = $(this).find("img").attr("src");
-$(this).css('background-image', 'url(' + imgSrc + ')');
+    
+$(function() {
+    $(".img-w").each(function() {
+    $(this).wrap("<div class='img-c'></div>")
+    let imgSrc = $(this).find("img").attr("src");
+    $(this).css('background-image', 'url(' + imgSrc + ')');
 })
   
 
@@ -96,9 +97,6 @@ copy.addClass("positioned")
 }, 0)
 
 }) 
-
-
-
 
 })
 
