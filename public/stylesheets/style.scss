@@ -1,0 +1,319 @@
+form.signup,
+form.login {
+  margin-top: 50px;
+}
+body {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  --line-offset: calc((10vh + 8px) / 2);
+}
+
+/* member */
+body {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  --line-offset: calc((10vh + 8px) / 2);
+}
+
+.container {
+  width: 100vw;
+  height: 100vh;
+  display: grid;
+  grid-template-rows: 5fr 1fr;
+  background: #dbd7d2;
+}
+
+ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  justify-content: center;
+  display: flex;
+}
+
+.tab {
+  width: calc(10vh + 8px);
+  height: calc(10vh + 8px);
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  clip-path: polygon(0% 50%, 15% 0%, 85% 0%, 100% 50%, 85% 100%, 15% 100%);
+  shape-outside: polygon(0% 50%, 15% 0%, 85% 0%, 100% 50%, 85% 100%, 15% 100%);
+  z-index: 0;
+  transition: width 0.5s;
+}
+
+.tab img {
+  width: 10vh;
+  height: 10vh;
+  z-index: 10;
+  cursor: pointer;
+  clip-path: polygon(0% 50%, 15% 0%, 85% 0%, 100% 50%, 85% 100%, 15% 100%);
+  shape-outside: polygon(0% 50%, 15% 0%, 85% 0%, 100% 50%, 85% 100%, 15% 100%);
+  transition: width 0.5s;
+}
+
+[type=radio] {
+  display: none;   
+}
+
+.preview-list {
+  background: linear-gradient(
+      #dbd7d2,
+      #dbd7d2 var(--line-offset),
+      #dbd7d2 var(--line-offset)
+  );
+}
+
+.tab {
+  background: linear-gradient(
+      #efefef,
+      #efefef var(--line-offset),
+      #021919 var(--line-offset)
+  );
+}
+
+[type=radio]:checked ~ label ~ .content{
+  text-align: center;
+  z-index: 8;
+}
+
+
+[type=radio]:checked ~ label .tab{
+  width: 0;
+}
+
+.content {
+  position: absolute;
+  background: #021919;
+  top: 1vh;
+  left: 0;
+  width: 100vw;
+  height: 80vh;
+  overflow: hidden;
+  display: flex;
+  align-items: center;
+}
+
+.content img {
+  height: auto;
+  width: 100vw;  
+}
+
+/* artbook */
+bodyM {
+  overflow: hidden;
+}
+
+.hard {
+  background-color: #00f;
+  display: flex;
+  justify-content: center;
+}
+
+.pg1 {
+  background-color: #ff0;
+  display: flex;
+  justify-content: center;
+}
+
+.pg2 {
+  background-color: #0ff;
+  display: flex;
+  justify-content: center;
+}
+
+.pg3 {
+  background-color: #f0f;
+  display: flex;
+  justify-content: center;
+}
+
+.pg4 {
+  background-color: #f00;
+  display: flex;
+  justify-content: center;
+}
+
+#flipbook {
+  display: flex;
+  justify-content: center;
+  width: 1500px;
+  height: 1860;
+  align-items: center;
+  float: center;
+}
+
+#flipbook .page{
+  width:600px;
+  height:960px;
+  background-color:white;
+  line-height:300px;
+  font-size:20px;
+  text-align:center;
+}
+
+#flipbook .page-wrapper{
+  -webkit-perspective:2000px;
+  -moz-perspective:2000px;
+  -ms-perspective:2000px;
+  -o-perspective:2000px;
+  perspective:2000px;
+}
+
+#flipbook .hard{
+  background:#ccc !important;
+  color:#333;
+  -webkit-box-shadow:inset 0 0 5px #666;
+  -moz-box-shadow:inset 0 0 5px #666;
+  -o-box-shadow:inset 0 0 5px #666;
+  -ms-box-shadow:inset 0 0 5px #666;
+  box-shadow:inset 0 0 5px #666;
+  font-weight:bold;
+}
+
+#flipbook .odd{
+  background:-webkit-gradient(linear, right top, left top, color-stop(0.95, #FFF), color-stop(1, #DADADA));
+  background-image:-webkit-linear-gradient(right, #FFF 95%, #C4C4C4 100%);
+  background-image:-moz-linear-gradient(right, #FFF 95%, #C4C4C4 100%);
+  background-image:-ms-linear-gradient(right, #FFF 95%, #C4C4C4 100%);
+  background-image:-o-linear-gradient(right, #FFF 95%, #C4C4C4 100%);
+  background-image:linear-gradient(right, #FFF 95%, #C4C4C4 100%);
+  -webkit-box-shadow:inset 0 0 5px #666;
+  -moz-box-shadow:inset 0 0 5px #666;
+  -o-box-shadow:inset 0 0 5px #666;
+  -ms-box-shadow:inset 0 0 5px #666;
+  box-shadow:inset 0 0 5px #666;
+  
+}
+
+#flipbook .even{
+  background:-webkit-gradient(linear, left top, right top, color-stop(0.95, #fff), color-stop(1, #dadada));
+  background-image:-webkit-linear-gradient(left, #fff 95%, #dadada 100%);
+  background-image:-moz-linear-gradient(left, #fff 95%, #dadada 100%);
+  background-image:-ms-linear-gradient(left, #fff 95%, #dadada 100%);
+  background-image:-o-linear-gradient(left, #fff 95%, #dadada 100%);
+  background-image:linear-gradient(left, #fff 95%, #dadada 100%);
+  -webkit-box-shadow:inset 0 0 5px #666;
+  -moz-box-shadow:inset 0 0 5px #666;
+  -o-box-shadow:inset 0 0 5px #666;
+  -ms-box-shadow:inset 0 0 5px #666;
+  box-shadow:inset 0 0 5px #666;
+}
+
+.bodyA {
+  padding: 30px 0;
+
+body {
+  padding: 0;
+
+  position: relative;
+  overflow: hidden;
+}
+
+.gallery {
+  width: 600px;
+  margin: auto;
+  border-radius: 3px;
+  overflow: hidden;
+  position: relative;
+}
+.img-c {
+  width: 200px;
+  height: 200px;
+  float: left;
+  position: relative;
+  overflow: hidden;
+}
+
+.img-w {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  background-size: cover;
+  background-position: center;
+  cursor: pointer;
+  transition: transform ease-in-out 300ms;
+}
+
+.img-w img {
+  display: none;
+}
+
+.img-c {
+    transition: width ease 400ms, height ease 350ms, left cubic-bezier(0.4, 0, 0.2, 1) 420ms, top cubic-bezier(0.4, 0, 0.2, 1) 420ms;
+}
+
+.img-c:hover .img-w {
+  transform: scale(1.08);
+  transition: transform cubic-bezier(0.4, 0, 0.2, 1) 450ms;
+}
+
+.img-c.active {
+  width: 100% !important;
+  height: 100% !important;
+  position: absolute;
+  z-index: 2;
+  transform: translateX(-50%);
+}
+
+.img-c.postactive {
+  position: absolute;
+  z-index: 2;
+  pointer-events: none;
+}
+
+.img-c.active.positioned {
+  left: 0 !important;
+  top: 0 !important;
+  transition-delay: 50ms;
+}
+
+
+#navBar {
+  z-index: 23;
+}
+
+.containersignup {
+  background: url(https://static01.nyt.com/images/2016/09/28/well/well_guide_metropolitan-slide-I91T/well_guide_metropolitan-slide-I91T-jumbo-v3.jpg);
+  background-position: center center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+h2 {
+  font-weight: bold;
+  color: white;
+  font-style: italic;
+  font-size: 70px;
+}
+
+p {
+  font-weight: bold;
+  color: white;
+  font-style: italic;
+  font-size: 25px;
+}
+
+.email {
+  font-weight: bold;
+  color: white;
+  font-style: italic;
+  font-size: 20px;
+}
+
+.password {
+  font-weight: bold;
+  color: white;
+  font-style: italic;
+  font-size: 20px;
+}
+
+.container {
+  align-content: center;
+  padding-bottom: 145px;
+}
+}

@@ -13,7 +13,21 @@
     </script>
 </head>
 
-<body>
+<body class="bodyA">
+    <ul class="nav justify-content-end">
+        <li class="nav-item">
+          <a class="nav-link active" href="#">Active</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="#">Link</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="#">Link</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link disabled" href="#" tabindex="-1" aria-disabled="true">Disabled</a>
+        </li>
+      </ul>
     <!-- <div class="container"> -->
     <div id="flipbook">
         <div class="hard"></div>
@@ -46,8 +60,8 @@
     <button id="nextBtn">Next</button>
     <script>
         $("#flipbook").turn({
-            width: 960,
-            height: 600,
+            width: 1860,
+            height: 1500,
             autoCenter: true
         });
 
@@ -70,11 +84,12 @@
         });
     </script>
     <script>
-        $(function() {
-$(".img-w").each(function() {
-$(this).wrap("<div class='img-c'></div>")
-let imgSrc = $(this).find("img").attr("src");
-$(this).css('background-image', 'url(' + imgSrc + ')');
+    
+$(function() {
+    $(".img-w").each(function() {
+    $(this).wrap("<div class='img-c'></div>")
+    let imgSrc = $(this).find("img").attr("src");
+    $(this).css('background-image', 'url(' + imgSrc + ')');
 })
   
 
@@ -96,9 +111,6 @@ copy.addClass("positioned")
 }, 0)
 
 }) 
-
-
-
 
 })
 
