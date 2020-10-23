@@ -19,11 +19,6 @@ body {
   --line-offset: calc((10vh + 8px) / 2);
 }
 
-
-.form-control {
-  width: 20%;
-}
-
 .container {
   width: 100vw;
   height: 100vh;
@@ -220,6 +215,13 @@ bodyM {
   padding: 30px 0;
 }
 
+.bodyA body {
+  padding: 0;
+
+  position: relative;
+  overflow: hidden;
+}
+
 .gallery {
   width: 600px;
   margin: auto;
@@ -279,8 +281,10 @@ bodyM {
   transition-delay: 50ms;
 }
 
-
-.containersignup {
+.login-form {
+  max-width: 500px;
+  margin: 0 auto;
+}
 
 
 #navBar {
