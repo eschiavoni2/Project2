@@ -28,21 +28,12 @@ module.exports = function(app) {
       }).then(art => res.json(art))
     });
 
-  app.get('/artbook', (req, res) => {
+  app.get('/artbook/:member', (req, res) => {
 
-    console.log(req);
-
-      db.User.findAll({
-        include: [
-          {
-            model: db.artbook,
-            include: [
-              {
-                model: db.artwork
-              }
-            ]
-          }
-        ]
+      db.artbook.findAll({
+        where: {
+          user_id: req.params.member
+        }
       })
       .then(art => res.json(art))
     });

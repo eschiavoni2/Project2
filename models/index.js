@@ -8,10 +8,6 @@ var env       = process.env.NODE_ENV || 'development';
 var config    = require(__dirname + '/../config/config.js')[env];
 var db        = {};
 
-db.user = require('../models/user');
-db.artbook = require('../models/artbook');
-db.artwork = require('../models/artwork')
-
 if (config.use_env_variable) {
   var sequelize = new Sequelize(process.env[config.use_env_variable]);
 } else {
@@ -36,8 +32,5 @@ Object.keys(db).forEach(function(modelName) {
 
 db.sequelize = sequelize;
 db.Sequelize = Sequelize;
-
-db.user.hasMany(db.artbook);
-db.artbook.hasMany(db.artwork);
 
 module.exports = db;
