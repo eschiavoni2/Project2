@@ -32,7 +32,19 @@ $(artistSearch).on("submit", function handleFormSubmit(event) {
         // console.log(data);
         for(i = 0; i < data.length; i++) {
           if(data[i].thumbnailUrl !== '\"\"') {
-            
+            $('.results').append(`
+              <div class="col-sm-6 col-md-3">
+                <div class="card">
+                  <div class="card-body">
+                    <h5 class="card-title">${data[i].title}</h5>
+                    <img src="${data[i].thumbnailUrl}" style="height: 120px;" />
+                    <p>${data[i].artist} ${data[i].year}</p>
+                    <button class="btn btn-success btn-block saveArt">Save to your Artbook</button>
+                  </div>
+                </div>
+              </div>
+            `);
+            /*
             var imageDiv = $('<div>')
             var imageCard = $('<div>')
             var imageTitle = $('<h5>')
@@ -58,6 +70,7 @@ $(artistSearch).on("submit", function handleFormSubmit(event) {
             imageCard.append(saveBtn);
             imageDiv.append(imageCard);
             $('.results').append(imageDiv);
+            */
           }
         }
 
