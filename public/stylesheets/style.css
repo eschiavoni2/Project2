@@ -271,6 +271,8 @@ bodyM {
   background-position: center center;
   background-repeat: no-repeat;
   background-size: cover;
+  
+  padding-bottom: 180px;
 }
 
 #containersignup {
@@ -278,6 +280,8 @@ bodyM {
   background-position: center center;
   background-repeat: no-repeat;
   background-size: cover;
+  
+  padding-bottom: 180px;
 }
 
 h2 {
@@ -308,7 +312,18 @@ p {
   font-size: 20px;
 }
 
-.container {
-  align-content: center;
-  padding-bottom: 145px;
+
+
+.link {
+  color: rgb(214, 2, 233);
+}
+
+.login-form {
+  max-width: 500px;
+  margin: 0 auto;
+}
+
+.signup-form {
+  max-width: 500px;
+  margin: 0 auto;
 }
