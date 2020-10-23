@@ -1,4 +1,5 @@
 module.exports = function(sequelize, DataTypes) {
+<<<<<<< HEAD
   var artwork_data = sequelize.define("artwork_data", {
     id: {
       type: DataTypes.INTEGER,
@@ -46,3 +47,16 @@ module.exports = function(sequelize, DataTypes) {
   });
   return artwork_data;
 };
+=======
+    var artbook = sequelize.define("artbook", {
+      user_id: {
+        type: DataTypes.STRING,
+      },
+      savedArt: {
+        type: DataTypes.STRING
+      }
+    });
+    return artbook;
+  };
+  
+>>>>>>> 01ef3745f2754b64848f55f10dbf9837869b2eef

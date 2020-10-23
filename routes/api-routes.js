@@ -9,12 +9,21 @@ module.exports = function(app) {
     var firstName = req.params.name.split(' ').slice(0, -1).join(' ');
     var lastName = req.params.name.split(' ').slice(-1).join(' ');
     var name = `${lastName}, ${firstName}`
-    
-      console.log(name);
-      
-      db.artwork_data.findAll({
+          
+    db.artwork_data.findAll({
         where: {
           artist: name
+        }
+      }).then(art => res.json(art))
+    });
+
+  app.get('/idsearch/:id', (req, res) => {
+
+    var artId = req.params.id;
+
+      db.artwork_data.findAll({
+        where: {
+          id: artId
         }
       }).then(art => res.json(art))
     });
@@ -29,6 +38,20 @@ module.exports = function(app) {
       id: req.user.id
     });
   });
+
+  app.post("/api/saveart", (req, res) => {
+    
+    console.log(req.body);
+    db.artbook.create({
+      user_id: req.body.email,
+      savedArt: req.body.id
+    }).then(() => {
+      console.log('saved');
+    }).catch(err => {
+      console.log(err);
+    });
+  });
+
 
   // Route for signing up a user. The user's password is automatically hashed and stored securely thanks to
   // how we configured our Sequelize User Model. If the user is created successfully, proceed to log the user in,
