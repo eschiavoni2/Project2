@@ -159,6 +159,8 @@ bodyM {
   line-height:300px;
   font-size:20px;
   text-align:center;
+  display: flex;
+  justify-content: center;
 }
 
 #flipbook .page-wrapper{
@@ -209,10 +211,15 @@ bodyM {
   box-shadow:inset 0 0 5px #666;
 }
 
+.pageFld #prevBtn #nextBtn{
+  display: flex;
+  justify-content: center;
+}
 /* photos in artbook */
 
 .bodyA {
   padding: 30px 0;
+  background-color: #dbd7d2;
 }
 
 .bodyA body {
