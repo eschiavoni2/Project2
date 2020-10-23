@@ -28,6 +28,18 @@ module.exports = function(app) {
       }).then(art => res.json(art))
     });
 
+  app.get('/artbook/:member', (req, res) => {
+
+      db.artbook.findAll({
+        where: {
+          user_id: req.params.member
+        }
+      })
+      .then(art => res.json(art))
+    });
+
+
+
   // Using the passport.authenticate middleware with our local strategy.
   // If the user has valid login credentials, send them to the members page.
   // Otherwise the user will be sent an error
@@ -53,6 +65,8 @@ module.exports = function(app) {
       res.status(422).send(err);
     });
   });
+
+
 
 
   // Route for signing up a user. The user's password is automatically hashed and stored securely thanks to

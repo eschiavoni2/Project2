@@ -1,5 +1,14 @@
 let member;
 
+$('.test').on('click', function(e) {
+  e.preventDefault();
+  $.get('/artbook/' + member, function(data) {
+    if (data){
+      console.log(data);
+    }
+  })
+})
+
 $(document).ready(() => {
   // This file just does a GET request to figure out which user is logged in
   // and updates the HTML on the page
