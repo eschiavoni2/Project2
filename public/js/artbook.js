@@ -1,1 +1,1 @@
-$('#magazine').turn({gradients: true, acceleration: true});
+$('#flipbook').turn({gradients: true, acceleration: true});
