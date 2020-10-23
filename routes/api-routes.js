@@ -47,9 +47,10 @@ module.exports = function(app) {
       savedArt: req.body.id
     }).then(() => {
       console.log('saved');
-      return;
+      res.send('saved')
     }).catch(err => {
       console.log(err);
+      res.status(422).send(err);
     });
   });
 
