@@ -9,12 +9,12 @@
 //     copy.remove();
 //     }, 500)
 //     })
-    // $("#pageFld").val($("#flipbook").turn("page"));
+//     $("#pageFld").val($("#flipbook").turn("page"));
 
-    // $("#flipbook").bind("turned", function (event, page, view) {
-    //     $("#pageFld").val(page);
-    // });
+//     $("#flipbook").bind("turned", function (event, page, view) {
+//         $("#pageFld").val(page);
+//     });
 
-    // $("#pageFld").change(function () {
-    //     $("#flipbook").turn("page", $(this).val());
-    // });
+//     $("#pageFld").change(function () {
+//         $("#flipbook").turn("page", $(this).val());
+//     });
