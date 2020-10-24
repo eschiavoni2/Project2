@@ -44,33 +44,6 @@ $(artistSearch).on("submit", function handleFormSubmit(event) {
                 </div>
               </div>
             `);
-            /*
-            var imageDiv = $('<div>')
-            var imageCard = $('<div>')
-            var imageTitle = $('<h5>')
-            var imageArtist = $('<p>')
-            var artImage = $('<img>')
-            var saveBtn = $('<button>')
-
-            imageTitle.attr('class', 'card-title');
-            imageArtist.attr('class', 'card-text')
-            imageDiv.attr('class', 'col-md-3 col-sm-6 text-center imageDiv')
-            saveBtn.attr('art-id', data[i].id)
-            saveBtn.attr('class', 'btn-secondary saveArt')
-
-            imageTitle.text(data[i].title)
-            imageArtist.text(`${data[i].artist} ${data[i].year}`)
-            saveBtn.text('Save to your Artbook')
-
-            artImage.attr('src', data[i].thumbnailUrl);
-            artImage.attr('class', 'card-img-top');
-            imageCard.append(artImage);
-            imageCard.append(imageTitle);
-            imageCard.append(imageArtist);
-            imageCard.append(saveBtn);
-            imageDiv.append(imageCard);
-            $('.results').append(imageDiv);
-            */
           }
         }
 
