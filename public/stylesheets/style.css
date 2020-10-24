@@ -79,6 +79,7 @@ bodyM {
   align-items: center;
   float: center;
   margin-left: 80px;
+  margin-top: 10px;
 }
 
 #flipbook .page{
