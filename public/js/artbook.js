@@ -25,7 +25,11 @@ $(document).ready(() => {
                     // newDiv.attr('id', index)
                     // newDiv.append(`<img src="${element.thumbnailUrl}">`)
 
-                    div = $("<div />").html(`<div><img src="${element.thumbnailUrl}"></div>`);
+                    div = $("<div />").html(`
+                    <div>
+                            <img src="${element.thumbnailUrl}">
+                            <p style="color: #000; line-height: 24px;">${element.title}<br><br>${element.artist} ${element.year}</p>
+                    </div>`);
                     $("#flipbook").turn("addPage", div, index);
 
                     // $('#test').add(newDiv);
