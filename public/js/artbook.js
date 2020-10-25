@@ -10,21 +10,33 @@ $(document).ready(() => {
 
     $.get('/artbook/' + member, function(data) {
         if (data){
-            console.log(data);
+            // console.log(data);
         }
     }).then((data) => {
-        let savedArt = [];
+        
 
         for (i = 0; i < data.length; i++){
             $.get('/idsearch/' + data[i].savedArt).then(art => {
-                savedArt.push(art)
-                console.log(art[0]);
-                // $('.addHere').append(`<div><img src="${art[0].thumbnailUrl}"></div>`)
+                
+                // console.log(art);
+                art.forEach((element, index) => {
+                    console.log(element);
+                    // var newDiv = $('<div>');
+                    // newDiv.attr('id', index)
+                    // newDiv.append(`<img src="${element.thumbnailUrl}">`)
+
+                    div = $("<div />").html(`<div><img src="${element.thumbnailUrl}"></div>`);
+                    $("#flipbook").turn("addPage", div, index);
+
+                    // $('#test').add(newDiv);
+                });
+
+                // $('#one').append(`<img src="${art[0].thumbnailUrl}">`)
             }).then(()=> {
 
             })
         }
-        console.log(savedArt);
+        
     })
 })
 });
