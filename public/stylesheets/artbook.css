@@ -114,7 +114,11 @@
     left: 0;
     bottom: 0;
     width: 100%;
+
+    background-color: #ccc2a0;
+
     background-color: #dfd7be;
+
     color: white;
     text-align: center;
  }
