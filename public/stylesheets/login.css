@@ -26,21 +26,11 @@ body {
     background: rgba(0,0,0, 0.7);
   }
   
-  .avatar {
-    position: absolute;
-    width: 80px;
-    height: 80px;
-    border-radius: 50%;
-    overflow: hidden;
-    top: calc(-80px/2);
-    left: calc(50% - 40px);
-  }
-  
   .contact-form h2 {
     font-family: sans-serif;
-    font-size: 42px;
-    margin: 0;
-    padding: 0 0 20px;
+    font-size: 30px;
+    margin-bottom: -1px;
+    padding-top:160px;
     color: #fff;
     text-align: center;
     text-transform: uppercase;
@@ -48,8 +38,9 @@ body {
   
   
   .contact-form input {
-    width: 100%;
+    width: 50%;
     margin-bottom: 20px;
+    margin-left: 154px;
   }
   
   .contact-form input[type=email],
@@ -61,11 +52,11 @@ body {
     height: 35px;
     color: #fff;
     font-size: 15px;
-    
   }
   
   .contact-form input[type=submit] {
     height: 30px;
+    width: 180px;
     color: white;
     font-size: 17px;
     background: #1c8adb;
@@ -73,19 +64,15 @@ body {
     border-radius: 25px;
     border: none;
     outline: none;
-    margin-top: 15%;
+    margin-top: 2px;
+    margin-bottom: 9px;
+    margin-left: 220px;
+    position: center;
   }
   
-  input[type=checkbox] {
-    width: 20%;
-  }
-  
-  /* background image */
   #bodylogin {
     content: ' ';
-    position: fixed;
-    width: 100vw;
-    height: 100vh;
+    
   }
   
   .contact-form {
@@ -108,20 +95,24 @@ body {
     color: white;
     width: 30px;
     margin: -19px auto 10px;
-    margin-top: 150px;
     font-weight: bold;
     font-size: 16px;
+    margin-top: 1px;
+    text-align: center;
   }
   
   .plogin {
+    margin-top: -2px;
     color: white;
     text-align: center;
-    
     font-size: 18px;
   }
 
-  .signuplink {
-  color: rgb(180, 16, 180);
+  a {
+  text-align: center;
+ 
   }
 
-  
+#artlogo{
+  margin-left: 40px;
+}
