@@ -122,10 +122,12 @@
   }
   h3 {
       color: #212121;
+      margin-left: 10px;
   }
 
-  h4 {
+  p {
       color: #1c2331;
+      margin-left: 10px;
   }
   
   /* .bodyA body {
