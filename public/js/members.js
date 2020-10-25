@@ -25,11 +25,12 @@ $(artistSearch).on("submit", function handleFormSubmit(event) {
   event.preventDefault()
   $('.results').empty();
     var name = $("#search");
-
-    $.get("/namesearch/" + name.val().trim(), function(data) {
+    var url = "/namesearch/" + name.val().trim();
+    console.log(url)
+    $.get(url, function(data) {
       if (data) {
         // If this post exists, prefill our cms forms with its data
-        // console.log(data);
+        console.log(data);
         for(i = 0; i < data.length; i++) {
           if(data[i].thumbnailUrl !== '\"\"') {
             $('.results').append(`
@@ -55,7 +56,7 @@ $.get("/api/artwork/", function(data) {
           if (data) {
             // If this post exists, prefill our cms forms with its data
             // console.log(data);
-            for(i = 0; i < 100; i++) {
+            for(i = 0; i < 25; i++) {
                 var artworkCard = `
                   <div class="card col-sm-6 col-md-3">
                   <div class="card-body">
