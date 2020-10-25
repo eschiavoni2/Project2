@@ -111,6 +111,8 @@
   /* photos in artbook */
   
   .bodyA {
+      background-image: url(../images/reading-room\ \(2\)\ \(1\).png);
+      background-position: left;
     padding: 30px 0;
     background-color: #9e9e9e;
     ;
