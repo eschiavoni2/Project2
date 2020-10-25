@@ -65,7 +65,7 @@
   }
   
   #flipbook .hard{
-    background: #4B515D !important;
+    background-image: url(../images/artbookcover.png) !important;
     color:#333;
     -webkit-box-shadow:inset 0 0 5px rgb(94, 54, 168);
     -moz-box-shadow:inset 0 0 5px #666;
@@ -111,20 +111,27 @@
   /* photos in artbook */
   
   .bodyA {
-      background-image: url(../images/reading-room\ \(2\)\ \(1\).png);
-      background-position: left;
+    background-image: url(../images/reading-room\ \(2\)\ \(1\).png);
+    background-position: right;
     padding: 30px 0;
-    background-color: #9e9e9e;
-    ;
+    background-color: #f7f1f1;
+    color: rgba(255, 255, 255, 0.1);  
+  }
+  h3 {
+      color: #212121;
+  }
+
+  h4 {
+      color: rgba(255, 255, 255, 0.1);
   }
   
-  .bodyA body {
+  /* .bodyA body {
     padding: 0;
   
     position: relative;
     overflow: hidden;
   }
-  
+   */
   .gallery {
     width: 600px;
     margin: auto;
