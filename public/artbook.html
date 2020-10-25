@@ -1,4 +1,3 @@
-
 <!DOCTYPE html>
 <html lang="en">
 
@@ -8,7 +7,7 @@
     <title>Art Book</title>
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootswatch/3.3.7/lumen/bootstrap.min.css" />
     <link href="stylesheets/artbook.css" rel="stylesheet" />
-    <link href="js/artbook.js"/>
+    <link href="js/artbook.js" />
     <script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
     <script type="text/javascript" src="http://www.turnjs.com/lib/turn.min.js"></script>
     </script>
@@ -17,9 +16,9 @@
 <body class="bodyA">
     <ul class="nav justify-content-end">
         <li class="nav-item">
-          <a class="nav-link active" href="/members">Art Gallery</a>
-        </li> 
-      </ul> 
+            <a class="nav-link active" href="/members">Art Gallery</a>
+        </li>
+    </ul>
     <!-- <div class="container"> -->
 <h3>Welcome to your ArtBook</h3>
 <p>To see saved images click the top right corner of your ArtBook.</p>
@@ -42,111 +41,27 @@
 </script>
 
     <!-- <div id="flipbook">
+    <h3>Welcome to your ArtBook</h3>
+    <p>To see saved images click the top right corner of your ArtBook.</p>
+    <div id="flipbook">
+        <div class="hard">My ArtBook</div>
+        <!-- <div class="img-w"><img src="/public/images/artbookcover.png" alt="artbookcover" /></div> -->
         <div class="hard"></div>
-        <div class="hard">
-            <div class="gallery">
-                <div class="img-w">
-                  <img src="https://images.unsplash.com/photo-1485766410122-1b403edb53db?dpr=1&auto=format&fit=crop&w=1500&h=846&q=80&cs=tinysrgb&crop=" alt="" /></div>
-                <div class="img-w"><img src="https://images.unsplash.com/photo-1485793997698-baba81bf21ab?dpr=1&auto=format&fit=crop&w=1500&h=1000&q=80&cs=tinysrgb&crop=" alt="" /></div>
-                <div class="img-w"><img src="https://images.unsplash.com/photo-1485871800663-71856dc09ec4?dpr=1&auto=format&fit=crop&w=1500&h=2250&q=80&cs=tinysrgb&crop=" alt="" /></div>
-                <div class="img-w"><img src="https://images.unsplash.com/photo-1485871882310-4ecdab8a6f94?dpr=1&auto=format&fit=crop&w=1500&h=2250&q=80&cs=tinysrgb&crop=" alt="" /></div>
-                <div class="img-w"><img src="https://images.unsplash.com/photo-1485872304698-0537e003288d?dpr=1&auto=format&fit=crop&w=1500&h=1000&q=80&cs=tinysrgb&crop=" alt="" /></div>
-                <div class="img-w"><img src="https://images.unsplash.com/photo-1485872325464-50f17b82075a?dpr=1&auto=format&fit=crop&w=1500&h=1000&q=80&cs=tinysrgb&crop=" alt="" /></div>
-                <div class="img-w"><img src="https://images.unsplash.com/photo-1470171119584-533105644520?dpr=1&auto=format&fit=crop&w=1500&h=886&q=80&cs=tinysrgb&crop=" alt="" /></div>
-                <div class="img-w"><img src="https://images.unsplash.com/photo-1485881787686-9314a2bc8f9b?dpr=1&auto=format&fit=crop&w=1500&h=969&q=80&cs=tinysrgb&crop=" alt="" /></div>
-                <div class="img-w"><img src="https://images.unsplash.com/photo-1485889397316-8393dd065127?dpr=1&auto=format&fit=crop&w=1500&h=843&q=80&cs=tinysrgb&crop=" alt="" /></div>
-              </div>
-        </div>  
-        <div class="pg1"></div>
-        <div class="pg2"></div>
-        <div class="pg3"> Page 3 </div>
-        <div class="pg4"> Page 4 </div>
-
+        <div> </div>
+        <div> </div>
+        <div> </div>
+        <div> </div>
         <div class="hard"></div>
-        <div class="hard"></div> -->
-    <!-- </div> -->
-    <!-- </div> -->
-    <!-- <hr/> Page:
-    <input type="number" id="pageFld" min=1 />
-    <button id="prevBtn">Previous</button>
-    <button id="nextBtn">Next</button>
-    <script>
+        <div class="hard"></div>
+    </div>
+    <script type="text/javascript">
         $("#flipbook").turn({
-            width: 1860,
-            height: 1500,
-            autoCenter: true
+            width: 1180,
+            height: 650,
+
         });
+    </script>
 
-        $("#pageFld").val($("#flipbook").turn("page"));
-
-        $("#flipbook").bind("turned", function (event, page, view) {
-            $("#pageFld").val(page);
-        });
-
-        $("#pageFld").change(function () {
-            $("#flipbook").turn("page", $(this).val());
-        });
-
-        $("#prevBtn").click(function () {
-            $("#flipbook").turn("previous");
-        });
-
-        $("#nextBtn").click(function () {
-            $("#flipbook").turn("next");
-        });
-      </script>
-       <script>
-    
-       $(function() {
-       $(".img-w").each(function() {
-      $(this).wrap("<div class='img-c'></div>")
-      let imgSrc = $(this).find("img").attr("src");
-      $(this).css('background-image', 'url(' + imgSrc + ')');
-      })
-  
-
-     $(".img-c").click(function() {
-      let w = $(this).outerWidth()
-     let h = $(this).outerHeight()
-     let x = $(this).offset().left
-     let y = $(this).offset().top
-
-
-       $(".active").not($(this)).remove()
-      let copy = $(this).clone();
-      copy.insertAfter($(this)).height(h).width(w).delay(500).addClass("active")
-      $(".active").css('top', y - 8);
-      $(".active").css('left', x - 8);
-
-      setTimeout(function() {
-      copy.addClass("positioned")
-      }, 0)
-
-      }) 
-
-     })
-
-      $(document).on("click", ".img-c.active", function() {
-      let copy = $(this)
-      copy.removeClass("positioned active").addClass("postactive")
-      setTimeout(function() {
-      copy.remove();
-      }, 500)
-      })
-       </script>
-       </div>
-       <script>
-        $(function() {
-        $('.wrapper').click(function() {
-        $('.wrapper').each(function() {
-        $(this).css('z-index', 0); 
-         });
-        $(this).css('z-index', 10); 
-        $(this).toggleClass('open');    
-         }) 
-        })
-
-<!-- </script>
 </body>
 
-</html> -->
+</html>
