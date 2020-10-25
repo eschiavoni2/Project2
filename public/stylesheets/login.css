@@ -1,0 +1,118 @@
+body {
+  background-image: url(https://robbreport.com/wp-content/uploads/2019/02/louvre-c.jpg?w=1000);
+  background-position: center center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-attachment: fixed;
+}
+
+#bodylogin {
+    margin: 0;
+    padding: 0;
+  }
+  
+  .contact-form {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    -webkit-transform: translate(-50px,-50%);
+    -moz-transform: translate(-50%,-50px);
+    -ms-transform: translate(-50%,-50%);
+    -o-transform: translate(-50%,-50%);
+    transform: translate(-50%,-50%);
+    width: 300px;
+    height: 400px;
+    padding: 80px 40px;
+    background: rgba(0,0,0, 0.7);
+  }
+  
+  .contact-form h2 {
+    font-family: sans-serif;
+    font-size: 30px;
+    margin-bottom: -1px;
+    padding-top:160px;
+    color: #fff;
+    text-align: center;
+    text-transform: uppercase;
+  }
+  
+  
+  .contact-form input {
+    width: 50%;
+    margin-bottom: 20px;
+    margin-left: 154px;
+  }
+  
+  .contact-form input[type=email],
+  .contact-form input[type=password]{
+    border:none;
+    border-bottom: 1px solid white;
+    background: transparent;
+    outline: none;
+    height: 35px;
+    color: #fff;
+    font-size: 15px;
+  }
+  
+  .contact-form input[type=submit] {
+    height: 30px;
+    width: 180px;
+    color: white;
+    font-size: 17px;
+    background: #1c8adb;
+    cursor: pointer;
+    border-radius: 25px;
+    border: none;
+    outline: none;
+    margin-top: 2px;
+    margin-bottom: 9px;
+    margin-left: 220px;
+    position: center;
+  }
+  
+  #bodylogin {
+    content: ' ';
+    
+  }
+  
+  .contact-form {
+    
+    top: 50%;
+    left: 50%;
+    width: 700px;
+    height: 700px;
+    padding: 80px 40px;
+    box-sizing: border-box;
+    background: rgba(0.0.0..5);
+   
+  }
+  
+  #loginbtncolor {
+    color: white;
+  }
+  
+  .orlogin {
+    color: white;
+    width: 30px;
+    margin: -19px auto 10px;
+    font-weight: bold;
+    font-size: 16px;
+    margin-top: 1px;
+    text-align: center;
+  }
+  
+  .plogin {
+    margin-top: -2px;
+    color: white;
+    text-align: center;
+    font-size: 18px;
+  }
+
+  a {
+  text-align: center;
+ 
+  }
+
+#artlogo{
+  margin-left: 40px;
+}

@@ -227,6 +227,7 @@ body {
 
 #navBar {
   z-index: 23;
+<<<<<<< HEAD
 }
 
 #containerlogin {
@@ -476,4 +477,6 @@ input[type=checkbox] {
   margin: -19px auto 10px;
   margin-top: 1px;
   font-size: 15px;
+=======
+>>>>>>> a0bb538360e8b7c2637517de537117622811b994
 }
