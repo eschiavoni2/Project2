@@ -128,14 +128,14 @@
     background-color: #f7f1f1;
     color: rgba(255, 255, 255, 0.1);  
   }
-  h3 {
-      color: #1c8adb;
-      margin-left: 80px;
+  h2 {
+      color: #f2f6fa;
+      margin-left: 500px;
   }
 
-  p {
-      color: #1c8adb;
-      margin-left: 80px;
+  h5 {
+      color: #f8f7ef;
+      margin-left: 480px;
   }
   
   .gallery {
