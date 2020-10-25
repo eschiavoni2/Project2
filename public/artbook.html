@@ -19,7 +19,7 @@
           <a class="nav-link active" href="/members">Art Gallery</a>
         </li> 
       </ul> 
-    <!-- <div class="container"> -->
+    <div class="container"> -->
 
 <div id="flipbook">
 	<div class="hard">My Art Book</div>
@@ -52,13 +52,11 @@
                 console.log(data);
 
 
-
             for(i = 0; i < data.length; i++){
                 $.get('/idsearch/' + data[i].savedArt).then(data => {
-                    console.log(data[0]);
+                    console.log(data[0].thumbnailUrl);
                     console.log($('.p' + i));
-                    $('.p' + i).append(`<div><img src="${data[0].thumbnailUrl}"></div>`)
-                    
+                   
                 })
             }
             }
