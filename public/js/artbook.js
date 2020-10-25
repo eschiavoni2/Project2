@@ -6,10 +6,10 @@ var connection = mysql.createConnection({
   // Your port; if not 3306
   port: 3306,
   // Your username
-  user: "root",
+  user: "process.env.DB_USER",
   // Your password
-  password: "root",
-  database: "plants"
+  password: "process.env.DB_PASS",
+  database: "f47qfgaxx78y6jn2"
 });
 
 

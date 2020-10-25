@@ -5,6 +5,7 @@ form.login {
 
 startup
 body {
+  background-color: #B88846;
   padding: 0;
   margin: 0;
   box-sizing: border-box;
@@ -37,7 +38,7 @@ body {
 } */
 
 /* artbook */
-bodyM {
+.bodyM {
   overflow: hidden;
 }
 
