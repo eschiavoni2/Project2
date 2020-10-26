@@ -1,18 +1,3 @@
-var mysql = require("mysql");
-var inquirer = require("inquirer");
-// create the connection information for the sql database
-var connection = mysql.createConnection({
-  host: "localhost",
-  // Your port; if not 3306
-  port: 3306,
-  // Your username
-  user: "process.env.DB_USER",
-  // Your password
-  password: "process.env.DB_PASS",
-  database: "f47qfgaxx78y6jn2"
-});
-
-
 // $('#flipbook').turn({gradients: true, acceleration: true});
 
 // let saveBtn = document.querySelector("button").addEventListener("change", function (){
