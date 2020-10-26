@@ -13,7 +13,7 @@
   a {
     font-size: 15px;
      color: rgb(240, 242, 247);
-     margin-left: 89px
+     margin: 100px;
   }
   
 
@@ -83,15 +83,8 @@
     background-image: url(../images/artbookcover.png) !important;
     background-position: center;
     color: #FFF;
-    /* -webkit-box-shadow:inset 0 0 5px rgb(94, 54, 168);
-    -moz-box-shadow:inset 0 0 5px #666;
-    -o-box-shadow:inset 0 0 5px #666;
-    -ms-box-shadow:inset 0 0 5px #666;
-    box-shadow:inset 0 0 5px #666; */
     font-weight:bold;
     font-size: xx-large;
-
-    font-style: cursive;
   }
   
   #flipbook .odd{
