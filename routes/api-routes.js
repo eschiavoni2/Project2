@@ -38,6 +38,13 @@ module.exports = function(app) {
       .then(art => res.json(art))
     });
 
+    app.get('/api/artwork', (req, res) => {
+                db.artwork_data.findAll({})
+                .then(art => {
+      console.log(art)
+      res.json(art)
+      })
+              });
 
 
   // Using the passport.authenticate middleware with our local strategy.
