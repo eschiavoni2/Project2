@@ -36,9 +36,10 @@ $(document).ready(() => {
 
 //button to remove works from your artbook
 $("body").on("click", ".deleteArt", function(event) {
-  event.preventDefault();
   let artID = event.target.getAttribute("art-id");
+  console.log(event.target);
   $.get("/api/delete/" + member + "/" + artID).then(() => {
+      
   });
 });
 
