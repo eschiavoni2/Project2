@@ -20,17 +20,15 @@ body {
     -ms-transform: translate(-50%,-50%);
     -o-transform: translate(-50%,-50%);
     transform: translate(-50%,-50%);
-    width: 300px;
-    height: 400px;
-    padding: 80px 40px;
+    
     background: rgba(0,0,0, 0.7);
   }
   
   .contact-form h2 {
     font-family: sans-serif;
     font-size: 30px;
-    margin-bottom: -1px;
-    padding-top:160px;
+
+    padding-top:19px;
     color: #fff;
     text-align: center;
     text-transform: uppercase;
@@ -39,7 +37,7 @@ body {
   
   .contact-form input {
     width: 50%;
-    margin-bottom: 20px;
+    margin-bottom: 15px;
     margin-left: 154px;
   }
   
@@ -64,7 +62,7 @@ body {
     border-radius: 25px;
     border: none;
     outline: none;
-    margin-top: 2px;
+    margin-top: 10px;
     margin-bottom: 9px;
     margin-left: 220px;
     position: center;
@@ -76,15 +74,13 @@ body {
   }
   
   .contact-form {
-    
+    position: absolute;
     top: 50%;
     left: 50%;
     width: 700px;
-    height: 700px;
-    padding: 80px 40px;
+    height: 755px;
+    padding: 60px 40px;
     box-sizing: border-box;
-    background: rgba(0.0.0..5);
-   
   }
   
   #loginbtncolor {
@@ -94,7 +90,7 @@ body {
   .orlogin {
     color: white;
     width: 30px;
-    margin: -19px auto 10px;
+    margin: -19px auto 1px;
     font-weight: bold;
     font-size: 16px;
     margin-top: 1px;
@@ -102,7 +98,7 @@ body {
   }
   
   .plogin {
-    margin-top: -2px;
+    margin-top: px;
     color: white;
     text-align: center;
     font-size: 18px;
@@ -115,4 +111,27 @@ body {
 
 #artlogo{
   margin-left: 40px;
+}
+
+
+h1 {
+  padding-top: 13px;
+  font-size: 18px;
+  color: #fff;
+  font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+  text-align: center;
+}
+
+.info2 {
+  padding-bottom: -50px;
+}
+
+footer {
+  position: fixed;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    background-color: #dfd7be;
+    color: black;
+    text-align: center;
 }
