@@ -3,12 +3,20 @@
     overflow: hidden;
     color: #0ff;
   }
+
+
+  .deleteArt {
+    width: 250px;
+    margin: 0 auto;
+  }
+
   a {
     font-size: 15px;
      color: rgb(240, 242, 247);
      margin: 100px;
   }
   
+
   
   hard {
     background-color: #00f;
@@ -107,6 +115,21 @@
     -ms-box-shadow:inset 0 0 5px #666;
     box-shadow:inset 0 0 5px #666;
   }
+
+  
+  .footer {
+    position: fixed;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+
+    background-color: #ccc2a0;
+
+    background-color: #dfd7be;
+
+    color: white;
+    text-align: center;
+ }
   /* photos in artbook */
   
   .bodyA {
