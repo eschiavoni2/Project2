@@ -47,7 +47,7 @@ $("body").on("click", ".deleteArt", function(event) {
 $("body").on("click", ".lastPage", function(event) {
     event.preventDefault();
 
-    $("#flipbook").turn("page", 1);
+    $("#flipbook").turn("page", 1).turn('stop');
   });
 
 function addBack() {
