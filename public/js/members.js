@@ -1,4 +1,6 @@
 let member;
+var artistSearch = $("#artistSearch");
+var saveArt = $(".saveArt");
 
 $('.test').on('click', function(e) {
   e.preventDefault();
@@ -21,15 +23,14 @@ $(document).ready(() => {
 
 });
 
-var artistSearch = $("#artistSearch");
-var saveArt = $(".saveArt");
-
+//search for art. clear the results div every time you make a new search
 $(artistSearch).on("submit", function handleFormSubmit(event) {
   event.preventDefault()
   $('.results').empty();
     var name = $("#search");
 
-    $.get("/namesearch/" + name.val().trim(), function(data) {
+//query the db and add results
+  $.get("/namesearch/" + name.val().trim(), function(data) {
       if (data) {
         // If this post exists, prefill our cms forms with its data
         // console.log(data);
@@ -54,63 +55,14 @@ $(artistSearch).on("submit", function handleFormSubmit(event) {
     });
 })
 
-var mediumSearch = $("#mediumSearch");
-var saveArt = $(".saveArt");
-
-$(artistSearch).on("submit", function handleFormSubmit(event) {
-  event.preventDefault()
-  $('.results').empty();
-    var name = $("#search");
-
-    $.get("/namesearch/" + name.val().trim(), function(data) {
-      if (data) {
-        // If this post exists, prefill our cms forms with its data
-        // console.log(data);
-        for(i = 0; i < data.length; i++) {
-          if(data[i].thumbnailUrl !== '\"\"') {
-            console.log(data[i].id);
-            $('.results').append(`
-              <div class="col-sm-6 col-md-3">
-                <div class="card">
-                  <div class="card-body">
-                    <h5 class="card-title">${data[i].title}</h5>
-                    <img src="${data[i].thumbnailUrl}" style="height: 120px;" />
-                    <p>${data[i].artist} ${data[i].year}</p>
-                    <button class="btn btn-success btn-block saveArt" art-id="test">Save to your Artbook</button>
-                  </div>
-                </div>
-              </div>
-            `);
-          }
-        }
-
-      }
-    });
-})
-
-
-
-
+//save art based on user_id (email) and artID
 $('body').on('click', '.saveArt', function(event) {
   event.preventDefault()
 
   let artID = event.target.getAttribute('art-id');
-  console.log(member);
-
+  
   $.post("/api/saveart", {
     email: member,
     id: artID
-  }).then(() => {
-    console.log('saved');
   })
 })
-
-$.get("")
-
-// $.get("/idsearch/" + artID, function(data) {
-//   if (data) {
-//     // If this post exists, prefill our cms forms with its data
-//     console.log(data);
-//   }
-// })
-
