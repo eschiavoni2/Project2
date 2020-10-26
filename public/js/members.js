@@ -16,6 +16,9 @@ $(document).ready(() => {
     $(".member-name").text(data.email);
     member = data.email;
   });
+  
+  $('body').scrollTo('#scrollHere', 2000);
+
 });
 
 var artistSearch = $("#artistSearch");
@@ -84,6 +87,7 @@ $(artistSearch).on("submit", function handleFormSubmit(event) {
       }
     });
 })
+
 
 
 
