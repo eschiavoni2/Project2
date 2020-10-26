@@ -4,14 +4,19 @@
     color: #0ff;
   }
 
+
   .deleteArt {
     width: 250px;
     margin: 0 auto;
   }
 
-  div.page {
-    background-color: black !important;
+  a {
+    font-size: 15px;
+     color: rgb(240, 242, 247);
+     margin: 100px;
   }
+  
+
   
   hard {
     background-color: #00f;
@@ -78,15 +83,8 @@
     background-image: url(../images/artbookcover.png) !important;
     background-position: center;
     color: #FFF;
-    /* -webkit-box-shadow:inset 0 0 5px rgb(94, 54, 168);
-    -moz-box-shadow:inset 0 0 5px #666;
-    -o-box-shadow:inset 0 0 5px #666;
-    -ms-box-shadow:inset 0 0 5px #666;
-    box-shadow:inset 0 0 5px #666; */
     font-weight:bold;
     font-size: xx-large;
-
-    font-style: cursive;
   }
   
   #flipbook .odd{
@@ -117,22 +115,28 @@
     -ms-box-shadow:inset 0 0 5px #666;
     box-shadow:inset 0 0 5px #666;
   }
+
   
   .footer {
     position: fixed;
     left: 0;
     bottom: 0;
     width: 100%;
+
+    background-color: #ccc2a0;
+
     background-color: #dfd7be;
+
     color: white;
     text-align: center;
  }
-
   /* photos in artbook */
   
   .bodyA {
     background-image: url(../images/readingroom.png);
-    background-position: right;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
     padding: 30px 0;
     background-color: #f7f1f1;
     color: rgba(255, 255, 255, 0.1);  
@@ -205,3 +209,12 @@
     top: 0 !important;
     transition-delay: 50ms;
   }
+  .footer {
+    position: fixed;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    background-color: #dfd7be;
+    color: white;
+    text-align: center;
+ }
