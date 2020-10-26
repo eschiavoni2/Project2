@@ -3,6 +3,11 @@
     overflow: hidden;
     color: #0ff;
   }
+
+  .deleteArt {
+    width: 250px;
+    margin: 0 auto;
+  }
   
   hard {
     background-color: #00f;

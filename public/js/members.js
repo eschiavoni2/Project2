@@ -39,7 +39,7 @@ $(artistSearch).on("submit", function handleFormSubmit(event) {
                     <h5 class="card-title">${data[i].title}</h5>
                     <img src="${data[i].thumbnailUrl}" style="height: 120px;" />
                     <p>${data[i].artist} ${data[i].year}</p>
-                    <button class="btn btn-success btn-block saveArt">Save to your Artbook</button>
+                    <button art-id="${data[i].id}" class="btn btn-success btn-block saveArt">Save to your Artbook</button>
                   </div>
                 </div>
               </div>
@@ -65,6 +65,7 @@ $(artistSearch).on("submit", function handleFormSubmit(event) {
         // console.log(data);
         for(i = 0; i < data.length; i++) {
           if(data[i].thumbnailUrl !== '\"\"') {
+            console.log(data[i].id);
             $('.results').append(`
               <div class="col-sm-6 col-md-3">
                 <div class="card">
@@ -72,7 +73,7 @@ $(artistSearch).on("submit", function handleFormSubmit(event) {
                     <h5 class="card-title">${data[i].title}</h5>
                     <img src="${data[i].thumbnailUrl}" style="height: 120px;" />
                     <p>${data[i].artist} ${data[i].year}</p>
-                    <button class="btn btn-success btn-block saveArt">Save to your Artbook</button>
+                    <button class="btn btn-success btn-block saveArt" art-id="test">Save to your Artbook</button>
                   </div>
                 </div>
               </div>

@@ -66,6 +66,24 @@ module.exports = function(app) {
     });
   });
 
+  app.get("/api/delete/:member/:id", (req, res) => {
+    console.log("i tried");
+    console.log(req.params);
+
+    db.artbook.destroy({
+      where: {
+        user_id: req.params.member,
+        savedArt: req.params.id
+      }
+    }).then(() => {
+      console.log('deleted');
+      res.send('deleted')
+    }).catch(err => {
+      console.log(err);
+      res.status(422).send(err);
+    });
+  });
+
 
 
 
