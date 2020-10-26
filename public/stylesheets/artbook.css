@@ -15,8 +15,12 @@
      color: #f4faff;
      text-align: center;
   }
-  
 
+  
+  .backbtn {
+    width: 250px;
+    margin: 0 auto;
+  }
   
   hard {
     background-color: #00f;
